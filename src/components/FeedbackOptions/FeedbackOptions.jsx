@@ -8,8 +8,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
         <button
           key={feedback}
           className={css.button}
-          onClick={onLeaveFeedback}
-          data-feedback={feedback}
+          onClick={() => onLeaveFeedback(feedback)}
         >
           {feedback.replace(/^[a-z]/, char => char.toUpperCase())}
         </button>
